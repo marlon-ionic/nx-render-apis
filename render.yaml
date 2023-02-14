@@ -4,4 +4,4 @@ services:
   env: node
   region: ohio
   buildCommand: npm i; npx nx build api
-  startCommand: npm run start:api
+  startCommand: node dist/apps/api/main.js
