@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { ApplepayModule } from '../applepay/applepay.module';
 import { UploadModule } from '../upload';
 import { UserAgentModule } from '../user-agent/user-agent.module';
 
@@ -16,7 +17,7 @@ import { AppService } from './app.service';
         index: false
       }
     }),
-    UploadModule, UserAgentModule],
+    ApplepayModule, UploadModule, UserAgentModule],
   controllers: [AppController],
   providers: [AppService],
 })
